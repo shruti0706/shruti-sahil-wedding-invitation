@@ -33,7 +33,7 @@ window.WEDDING_CONTENT = {
       "address": "Machalpur"
     },
     {
-      "name": "Mehndi",
+      "name": "Mehendi",
       "image": "assets/mehndi.png",
       "date": "7 December 2026",
       "time": "1:00 PM onwards",
