@@ -57,7 +57,7 @@ window.WEDDING_CONTENT = {
       "address": "Vidisha"
     },
     {
-      "name": "Sangeet (Mahila Sangeet)",
+      "name": "Sangeet",
       "image": "assets/sangeet.gif",
       "date": "8 December 2026",
       "time": "8:00 PM onwards",
