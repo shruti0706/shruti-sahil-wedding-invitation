@@ -6,12 +6,12 @@ window.WEDDING_CONTENT = {
   "venues": [
     {
       "name": "Agrawal Dharamshala",
-      "address": "Machalpur, Rajgarh, Madhya Pradesh",
+      "address": "Machalpur",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Agrawal%20Dharamshala%2C%20Machalpur%2C%20Rajgarh%2C%20Madhya%20Pradesh"
     },
     {
       "name": "Riverside Inn Resorts",
-      "address": "Vidisha, Madhya Pradesh",
+      "address": "Vidisha",
       "mapUrl": "https://maps.app.goo.gl/z9yZuKkRnSpukzrm7"
     }
   ],
@@ -22,7 +22,7 @@ window.WEDDING_CONTENT = {
       "date": "6 December 2026",
       "time": "9:00 AM onwards",
       "venue": "Agrawal Dharamshala",
-      "address": "Machalpur, Rajgarh, Madhya Pradesh"
+      "address": "Machalpur"
     },
     {
       "name": "Satyanarayan Katha & Bindora Procession",
@@ -30,7 +30,7 @@ window.WEDDING_CONTENT = {
       "date": "6 December 2026",
       "time": "8:00 PM onwards",
       "venue": "Agrawal Dharamshala",
-      "address": "Machalpur, Rajgarh, Madhya Pradesh"
+      "address": "Machalpur"
     },
     {
       "name": "Mehndi",
@@ -38,7 +38,7 @@ window.WEDDING_CONTENT = {
       "date": "7 December 2026",
       "time": "1:00 PM onwards",
       "venue": "Agrawal Dharamshala",
-      "address": "Machalpur, Rajgarh, Madhya Pradesh"
+      "address": "Machalpur"
     },
     {
       "name": "Bhajan Sandhya",
@@ -46,7 +46,7 @@ window.WEDDING_CONTENT = {
       "date": "7 December 2026",
       "time": "8:00 PM onwards",
       "venue": "Agrawal Dharamshala",
-      "address": "Machalpur, Rajgarh, Madhya Pradesh"
+      "address": "Machalpur"
     },
     {
       "name": "Haldi",
@@ -54,7 +54,7 @@ window.WEDDING_CONTENT = {
       "date": "8 December 2026",
       "time": "1:00 PM onwards",
       "venue": "Riverside Inn Resorts",
-      "address": "Vidisha, Madhya Pradesh"
+      "address": "Vidisha"
     },
     {
       "name": "Sangeet (Mahila Sangeet)",
@@ -62,7 +62,7 @@ window.WEDDING_CONTENT = {
       "date": "8 December 2026",
       "time": "8:00 PM onwards",
       "venue": "Riverside Inn Resorts",
-      "address": "Vidisha, Madhya Pradesh"
+      "address": "Vidisha"
     },
     {
       "name": "Sagai, Ring Ceremony & Malaji",
@@ -78,7 +78,7 @@ window.WEDDING_CONTENT = {
       "date": "9 December 2026",
       "time": "10:00 AM onwards",
       "venue": "Riverside Inn Resorts",
-      "address": "Vidisha, Madhya Pradesh"
+      "address": "Vidisha"
     },
     {
       "name": "Mamera & Gangour",
@@ -94,7 +94,7 @@ window.WEDDING_CONTENT = {
       "date": "9 December 2026",
       "time": "1:00 PM onwards",
       "venue": "Riverside Inn Resorts",
-      "address": "Vidisha, Madhya Pradesh"
+      "address": "Vidisha"
     },
     {
       "name": "Reception (Aashirwad Samaroh) & Phere (Panigrahan Sanskar)",
@@ -102,7 +102,7 @@ window.WEDDING_CONTENT = {
       "date": "9 December 2026",
       "time": "6:00 PM onwards",
       "venue": "Riverside Inn Resorts",
-      "address": "Vidisha, Madhya Pradesh",
+      "address": "Vidisha",
       "images": [
         "assets/reception.gif",
         "assets/phera.gif"
