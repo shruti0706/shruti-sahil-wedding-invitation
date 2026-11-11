@@ -57,18 +57,18 @@ window.WEDDING_CONTENT = {
       "address": "Vidisha, Madhya Pradesh"
     },
     {
-      "name": "Sagai & Ring Ceremony",
+      "name": "Sagai, Ring Ceremony & Malaji",
       "image": "assets/sagai.gif",
+      "images": [
+        "assets/sagai.gif",
+        "assets/malaji.gif"
+      ],
+      "imageLabels": [
+        "Sagai and Ring Ceremony",
+        "Malaji"
+      ],
       "date": "9 December 2026",
       "time": "10:00 AM onwards",
-      "venue": "Riverside Inn Resorts",
-      "address": "Vidisha, Madhya Pradesh"
-    },
-    {
-      "name": "Malaji",
-      "image": "assets/malaji.gif",
-      "date": "9 December 2026",
-      "time": "12:30 PM onwards",
       "venue": "Riverside Inn Resorts",
       "address": "Vidisha, Madhya Pradesh"
     },
@@ -78,6 +78,10 @@ window.WEDDING_CONTENT = {
       "images": [
         "assets/mamera.gif",
         "assets/gangore.gif"
+      ],
+      "imageLabels": [
+        "Mamera",
+        "Gangour"
       ],
       "date": "9 December 2026",
       "time": "1:00 PM onwards",
