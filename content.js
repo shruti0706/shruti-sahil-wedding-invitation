@@ -89,20 +89,20 @@ window.WEDDING_CONTENT = {
       "address": "Vidisha, Madhya Pradesh"
     },
     {
-      "name": "Reception (Aashirwad Samaroh)",
+      "name": "Reception (Aashirwad Samaroh) & Phere (Panigrahan Sanskar)",
       "image": "assets/reception.gif",
       "date": "9 December 2026",
       "time": "6:00 PM onwards",
       "venue": "Riverside Inn Resorts",
-      "address": "Vidisha, Madhya Pradesh"
-    },
-    {
-      "name": "Phera (Panigrahan Sanskar)",
-      "image": "assets/phera.gif",
-      "date": "9 December 2026",
-      "time": "Night",
-      "venue": "Riverside Inn Resorts",
-      "address": "Vidisha, Madhya Pradesh"
+      "address": "Vidisha, Madhya Pradesh",
+      "images": [
+        "assets/reception.gif",
+        "assets/phera.gif"
+      ],
+      "imageLabels": [
+        "Reception (Aashirwad Samaroh)",
+        "Phere (Panigrahan Sanskar)"
+      ]
     }
   ]
 };
