@@ -1,25 +1,442 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');:root{--wine:#762e3d;--gold:#bb8852;--cream:#fffaf4;--ink:#513b35}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#e8dfd6;color:var(--ink);font-family:'DM Sans',sans-serif}.shell{max-width:550px;margin:auto;min-height:100vh;background:var(--cream);box-shadow:0 0 45px #533b2c1f;overflow:hidden}.cover{min-height:100svh;position:relative;background:#e6c5a3;display:flex;align-items:end;justify-content:center}.cover-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.cover:after{content:'';position:absolute;inset:32% 0 0;background:linear-gradient(transparent,#3d2225dc)}.cover-copy{position:relative;z-index:1;color:white;text-align:center;padding:30px 18px 12vh;text-shadow:0 2px 9px #442c2d}.cover h1{font-size:clamp(3.4rem,13vw,5rem);margin:12px 0 0;line-height:1}.cover em,h2 em{color:#e6bf8a;font-weight:400}.cover-copy>p{letter-spacing:.11em}.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.69rem;font-weight:600;color:var(--gold)}.cover .eyebrow{color:#fff0d8}.enter,.back-top,.rsvp-btn{display:inline-block;border:1px solid #d9b98b;color:inherit;text-decoration:none;padding:14px 22px;margin-top:25px;border-radius:50px;background:#ffffff1c;font-size:.82rem;letter-spacing:.03em}.section{padding:68px 25px;text-align:center;position:relative}.section:before{content:'✦';position:absolute;top:22px;left:50%;transform:translateX(-50%);color:#c7a777}.intro{background:radial-gradient(ellipse at top,#fff2e5,#fffaf4 68%)}h2,h3{font-family:'Cormorant Garamond',Georgia,serif;color:var(--wine);font-weight:600}h2{font-size:2.8rem;line-height:1.06;margin:12px 0 20px}h3{font-size:2.45rem;margin:8px 0 18px}.names{font-size:3.3rem;color:chocolate;font-style:italic}.ornament{color:var(--gold);font-size:1.4rem;letter-spacing:.4em;margin:10px auto 30px}.blessing{max-width:260px;margin:12px auto 25px}.art-placeholder{border:1px dashed #c7aa8e;background:#f6eee3;border-radius:14px;padding:50px 20px;color:#97785e;font-family:Georgia,serif;line-height:1.6}.art-placeholder small{font-family:'DM Sans',sans-serif}.date{font-weight:600;letter-spacing:.04em}.countdown{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:35px 0 22px}.countdown div{background:#f4e6d8;border-radius:9px;padding:12px 3px}.countdown b{display:block;font:600 1.8rem 'Cormorant Garamond',serif;color:var(--wine)}.countdown small{font-size:.62rem;text-transform:uppercase;letter-spacing:.08em}.scroll-hint{font-size:.75rem;color:#a78b77}.events{background:#fffdf9}.event-card{margin:34px auto 54px;background:#fff9f2;border:1px solid #e8d5c0;border-radius:180px 180px 15px 15px;padding:16px 16px 24px;box-shadow:0 8px 26px #856d5214;overflow:hidden;opacity:0;transform:translateY(28px);transition:opacity .75s,transform .75s}.event-card.visible{opacity:1;transform:none}.event-card .index{color:var(--gold);letter-spacing:.25em;font-size:.7rem;margin:8px 0 5px}.event-art{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;border-radius:160px 160px 9px 9px}.event-card h3{margin-top:18px}.timing{margin:15px auto 20px;padding:13px 0;border-top:1px solid #ead8c7;border-bottom:1px solid #ead8c7;font-size:.88rem;min-height:48px}.blank{color:#ae9988;font-style:italic}.venue{font-size:.85rem;line-height:1.8}.venue strong{color:var(--wine)}.ending{background:#f7eadd;padding-bottom:90px}.thanks{margin-top:65px}.rsvp-btn{background:var(--wine);color:white;border:0}.back-top{font-size:.75rem;color:var(--wine)}@media(min-width:650px){.shell{margin:25px auto;border-radius:8px}.cover{min-height:850px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.event-card{opacity:1;transform:none;transition:none}}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --wine: #762e3d;
+  --gold: #bb8852;
+  --cream: #fffaf4;
+  --ink: #513b35
+}
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  margin: 0;
+  background: #e8dfd6;
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif
+}
+
+.shell {
+  max-width: 550px;
+  margin: auto;
+  min-height: 100vh;
+  background: var(--cream);
+  box-shadow: 0 0 45px #533b2c1f;
+  overflow: hidden
+}
+
+.cover {
+  min-height: 100svh;
+  position: relative;
+  background: #e6c5a3;
+  display: flex;
+  align-items: end;
+  justify-content: center
+}
+
+.cover-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+.cover:after {
+  content: '';
+  position: absolute;
+  inset: 32% 0 0;
+  background: linear-gradient(transparent, #3d2225dc)
+}
+
+.cover-copy {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  padding: 30px 18px 12vh;
+  text-shadow: 0 2px 9px #442c2d
+}
+
+.cover h1 {
+  font-size: clamp(3.4rem, 13vw, 5rem);
+  margin: 12px 0 0;
+  line-height: 1
+}
+
+.cover em,
+h2 em {
+  color: #e6bf8a;
+  font-weight: 400
+}
+
+.cover-copy>p {
+  letter-spacing: .11em
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  font-size: .69rem;
+  font-weight: 600;
+  color: var(--gold)
+}
+
+.cover .eyebrow {
+  color: #fff0d8
+}
+
+.enter,
+.back-top,
+.rsvp-btn {
+  display: inline-block;
+  border: 1px solid #d9b98b;
+  color: inherit;
+  text-decoration: none;
+  padding: 14px 22px;
+  margin-top: 25px;
+  border-radius: 50px;
+  background: #ffffff1c;
+  font-size: .82rem;
+  letter-spacing: .03em
+}
+
+.section {
+  padding: 68px 25px;
+  text-align: center;
+  position: relative
+}
+
+.section:before {
+  content: '✦';
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #c7a777
+}
+
+.intro {
+  background: radial-gradient(ellipse at top, #fff2e5, #fffaf4 68%)
+}
+
+h2,
+h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--wine);
+  font-weight: 600
+}
+
+h2 {
+  font-size: 2.8rem;
+  line-height: 1.06;
+  margin: 12px 0 20px
+}
+
+h3 {
+  font-size: 2.45rem;
+  margin: 8px 0 18px
+}
+
+.names {
+  font-size: 3.3rem;
+  color: chocolate;
+  font-style: italic
+}
+
+.ornament {
+  color: var(--gold);
+  font-size: 1.4rem;
+  letter-spacing: .4em;
+  margin: 10px auto 30px
+}
+
+.blessing {
+  max-width: 260px;
+  margin: 12px auto 25px
+}
+
+.art-placeholder {
+  border: 1px dashed #c7aa8e;
+  background: #f6eee3;
+  border-radius: 14px;
+  padding: 50px 20px;
+  color: #97785e;
+  font-family: Georgia, serif;
+  line-height: 1.6
+}
+
+.art-placeholder small {
+  font-family: 'DM Sans', sans-serif
+}
+
+.date {
+  font-weight: 600;
+  letter-spacing: .04em
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 35px 0 22px
+}
+
+.countdown div {
+  background: #f4e6d8;
+  border-radius: 9px;
+  padding: 12px 3px
+}
+
+.countdown b {
+  display: block;
+  font: 600 1.8rem 'Cormorant Garamond', serif;
+  color: var(--wine)
+}
+
+.countdown small {
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .08em
+}
+
+.scroll-hint {
+  font-size: .75rem;
+  color: #a78b77
+}
+
+.events {
+  background: #fffdf9
+}
+
+.event-card {
+  margin: 34px auto 54px;
+  background: #fff9f2;
+  border: 1px solid #e8d5c0;
+  border-radius: 180px 180px 15px 15px;
+  padding: 16px 16px 24px;
+  box-shadow: 0 8px 26px #856d5214;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .75s, transform .75s
+}
+
+.event-card.visible {
+  opacity: 1;
+  transform: none
+}
+
+.event-card .index {
+  color: var(--gold);
+  letter-spacing: .25em;
+  font-size: .7rem;
+  margin: 8px 0 5px
+}
+
+.event-art {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 160px 160px 9px 9px
+}
+
+.event-card h3 {
+  margin-top: 18px
+}
+
+.timing {
+  margin: 15px auto 20px;
+  padding: 13px 0;
+  border-top: 1px solid #ead8c7;
+  border-bottom: 1px solid #ead8c7;
+  font-size: .88rem;
+  min-height: 48px
+}
+
+.blank {
+  color: #ae9988;
+  font-style: italic
+}
+
+.venue {
+  font-size: .85rem;
+  line-height: 1.8
+}
+
+.venue strong {
+  color: var(--wine)
+}
+
+.ending {
+  background: #f7eadd;
+  padding-bottom: 90px
+}
+
+.thanks {
+  margin-top: 65px
+}
+
+.rsvp-btn {
+  background: var(--wine);
+  color: white;
+  border: 0
+}
+
+.back-top {
+  font-size: .75rem;
+  color: var(--wine)
+}
+
+@media(min-width:650px) {
+  .shell {
+    margin: 25px auto;
+    border-radius: 8px
+  }
+
+  .cover {
+    min-height: 850px
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto
+  }
+
+  .event-card {
+    opacity: 1;
+    transform: none;
+    transition: none
+  }
+}
+
 /* Mamera & Gangour: preserve both approved illustrations in one combined section */
-.combined-art{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start;margin:0 auto 12px;}
-.combined-art .event-art{width:100%;height:auto;object-fit:contain;min-width:0;margin:0;}
-@media(max-width:390px){.combined-art{gap:5px;}}
+.combined-art {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-items: start;
+  margin: 0 auto 12px;
+}
+
+.combined-art .event-art {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  min-width: 0;
+  margin: 0;
+}
+
+@media(max-width:390px) {
+  .combined-art {
+    gap: 5px;
+  }
+}
 
 /* Preserve approved vertical Mehndi illustration without cropping the lehenga or swing */
-.event-art[src$="mehndi.png"]{aspect-ratio:auto;height:auto;object-fit:contain;border-radius:140px 140px 9px 9px;}
+.event-art[src$="mehndi.png"] {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 140px 140px 9px 9px;
+}
+
 /* Blessings artwork: show the complete supplied Ganesh Ji idol */
-.blessing img{width:100%;height:auto;max-height:330px;object-fit:contain;border-radius:12px;display:block;}
+.blessing img {
+  width: 100%;
+  height: auto;
+  max-height: 330px;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+}
 
 /* Approved original bearded-couple cover: complete portrait, no zoom/crop, no overlay text. */
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.cover{position:relative;display:flex;align-items:center;justify-content:center;min-height:100svh;padding:0;background:#f8e8cc;isolation:isolate}
-.cover::after{content:none}
-.cover-link{position:relative;display:flex;width:100%;align-items:center;justify-content:center;min-height:100svh;outline-offset:-6px}
-.cover-poster{display:block;width:100%;height:auto;max-height:100svh;object-fit:contain;object-position:center;border:0;vertical-align:middle}
-.cover-link:focus-visible{outline:4px solid #7c3440}
-@media(min-width:650px){.cover{min-height:100svh}.cover-link{min-height:100svh}}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0
+}
+
+.cover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 0;
+  background: #f8e8cc;
+  isolation: isolate
+}
+
+.cover::after {
+  content: none
+}
+
+.cover-link {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  outline-offset: -6px
+}
+
+.cover-poster {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100svh;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  vertical-align: middle
+}
+
+.cover-link:focus-visible {
+  outline: 4px solid #7c3440
+}
+
+@media(min-width:650px) {
+  .cover {
+    min-height: 100svh
+  }
+
+  .cover-link {
+    min-height: 100svh
+  }
+}
+
 /* Original Ganesh Ji artwork stays fully visible; never crop the head or feet. */
-.blessing{max-width:min(350px,100%);margin:12px auto 25px}
-.blessing img{width:100%;height:auto;max-height:none;display:block;object-fit:contain;border-radius:16px;box-shadow:0 8px 24px #7a4a3320}
+.blessing {
+  max-width: min(350px, 100%);
+  margin: 12px auto 25px
+}
+
+.blessing img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  display: block;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px #7a4a3320
+}
 
 
 /* Venue directory: place all Google Maps links together AFTER the 10 celebrations. */
@@ -27,16 +444,32 @@
   background: #fffdf9;
   padding: 60px 26px 75px;
 }
-.locations-section::before { content: none; }
+
+.locations-section::before {
+  content: none;
+}
+
 .locations-heading {
   font-size: clamp(2.45rem, 9vw, 3.4rem);
   margin: 0 0 24px;
   color: sienna;
   font-style: italic;
 }
-.location-list { display: flex; flex-direction: column; align-items: stretch; }
-.location-entry { padding: 28px 0 33px; }
-.location-entry + .location-entry { margin-top: 12px; }
+
+.location-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.location-entry {
+  padding: 28px 0 33px;
+}
+
+.location-entry+.location-entry {
+  margin-top: 12px;
+}
+
 .location-kicker {
   margin: 0 0 22px;
   font-family: 'DM Sans', sans-serif;
@@ -45,6 +478,7 @@
   text-transform: uppercase;
   color: #ad875c;
 }
+
 .location-name {
   max-width: 490px;
   margin: 0 auto 12px;
@@ -57,6 +491,7 @@
   text-transform: uppercase;
   overflow-wrap: break-word;
 }
+
 .location-address {
   margin: 0 auto 24px;
   color: #6b5449;
@@ -65,6 +500,7 @@
   font-style: italic;
   line-height: 1.35;
 }
+
 .location-map-button {
   display: inline-flex;
   align-items: center;
@@ -83,30 +519,45 @@
   letter-spacing: .19em;
   text-decoration: none;
   text-transform: uppercase;
-  box-shadow: 0 12px 22px rgba(55,64,45,.18);
+  box-shadow: 0 12px 22px rgba(55, 64, 45, .18);
   transition: background .2s ease, transform .2s ease;
 }
+
 .location-map-button:hover,
 .location-map-button:focus-visible {
   background: #774431;
   transform: translateY(-2px);
 }
+
 .location-map-button:focus-visible {
   outline: 3px solid #cda875;
   outline-offset: 3px;
 }
+
 .location-flourish {
   color: #bd9b70;
   font-size: 1.1rem;
   margin-top: 20px;
 }
+
 @media (max-width: 380px) {
-  .locations-section { padding-inline: 18px; }
-  .location-name { letter-spacing: .035em; }
-  .location-map-button { min-width: 195px; }
+  .locations-section {
+    padding-inline: 18px;
+  }
+
+  .location-name {
+    letter-spacing: .035em;
+  }
+
+  .location-map-button {
+    min-width: 195px;
+  }
 }
+
 @media (prefers-reduced-motion: reduce) {
-  .location-map-button { transition: none; }
+  .location-map-button {
+    transition: none;
+  }
 }
 
 
@@ -116,7 +567,11 @@
   color: #4c413a;
   padding: 74px 23px 36px;
 }
-.family-ending::before { content: none; }
+
+.family-ending::before {
+  content: none;
+}
+
 .family-kicker {
   margin: 0 0 22px;
   color: #ad875c;
@@ -127,6 +582,7 @@
   line-height: 1.6;
   text-transform: uppercase;
 }
+
 .family-elders {
   max-width: 520px;
   margin: 0 auto 42px;
@@ -136,7 +592,11 @@
   line-height: 1.18;
   text-wrap: balance;
 }
-.family-rsvp-label { margin: 0 0 22px; }
+
+.family-rsvp-label {
+  margin: 0 0 22px;
+}
+
 .family-rsvp-names {
   color: #52623c;
   font-family: 'Cormorant Garamond', Georgia, serif;
@@ -144,8 +604,16 @@
   font-weight: 600;
   line-height: 1.22;
 }
-.family-rsvp-names p { margin: 0 0 20px; text-wrap: balance; }
-.family-ending #rsvp-action:empty { display: none; }
+
+.family-rsvp-names p {
+  margin: 0 0 20px;
+  text-wrap: balance;
+}
+
+.family-ending #rsvp-action:empty {
+  display: none;
+}
+
 .family-divider {
   display: flex;
   align-items: center;
@@ -155,20 +623,37 @@
   color: #bb9a69;
   font-size: 1.15rem;
 }
-.family-divider::before, .family-divider::after {
+
+.family-divider::before,
+.family-divider::after {
   content: '';
   width: min(21%, 86px);
   height: 1px;
   background: #c9ad82;
 }
+
 .family-ending .thanks {
   margin: 15px auto 12px;
   color: sienna;
   font-style: italic;
 }
-.family-thanks { line-height: 1.8; }
-.family-thanks strong { color: chocolate; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.6rem; font-style: italic; }
-.family-ending .back-top { display: inline-block; margin: 20px auto 32px; }
+
+.family-thanks {
+  line-height: 1.8;
+}
+
+.family-thanks strong {
+  color: chocolate;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.6rem;
+  font-style: italic;
+}
+
+.family-ending .back-top {
+  display: inline-block;
+  margin: 20px auto 32px;
+}
+
 .family-hashtag {
   margin: 4px auto 0;
   color: #52623c;
@@ -177,10 +662,19 @@
   letter-spacing: .2em;
   overflow-wrap: anywhere;
 }
-@media(max-width:380px){
-  .family-ending {padding-inline:18px;}
-  .family-kicker {letter-spacing:.22em;}
-  .family-hashtag {letter-spacing:.12em;}
+
+@media(max-width:380px) {
+  .family-ending {
+    padding-inline: 18px;
+  }
+
+  .family-kicker {
+    letter-spacing: .22em;
+  }
+
+  .family-hashtag {
+    letter-spacing: .12em;
+  }
 }
 
 
@@ -194,7 +688,11 @@
   align-items: center;
   justify-content: center;
 }
-.cover::after { content: none; }
+
+.cover::after {
+  content: none;
+}
+
 .cover-link {
   display: flex;
   width: 100%;
@@ -204,6 +702,7 @@
   outline-offset: -6px;
   -webkit-tap-highlight-color: transparent;
 }
+
 .cover-poster {
   display: block;
   width: 100%;
@@ -213,7 +712,10 @@
   object-position: center;
   border: 0;
 }
-.cover-link:focus-visible { outline: 3px solid #ae5b29; }
+
+.cover-link:focus-visible {
+  outline: 3px solid #ae5b29;
+}
 
 /* Page 2: live countdown and real editable text above the approved couple image. */
 .intro-story {
@@ -221,26 +723,32 @@
   background: linear-gradient(180deg, #fff2e3 0%, #fffcf6 65%, #fff2e3 100%);
   overflow: hidden;
 }
-.intro-story::before { content: none; }
+
+.intro-story::before {
+  content: none;
+}
+
 .story-top-ornament {
   font-size: 1.4rem;
   color: #c29354;
   letter-spacing: .3em;
   margin: 0 auto 18px;
 }
+
 .intro-story #story-heading {
   font-size: clamp(2.65rem, 9vw, 3.45rem);
   line-height: 1.03;
   margin: 0 auto 22px;
-  font-style: italic;
   font-weight: 600;
 }
+
 .intro-story .story-invite {
   max-width: 460px;
   margin: 0 auto 10px;
   font-size: clamp(.95rem, 3vw, 1.05rem);
   line-height: 1.7;
 }
+
 .intro-story .names {
   color: chocolate;
   font-style: italic;
@@ -249,50 +757,87 @@
   margin: 12px auto 22px;
   letter-spacing: -.025em;
 }
-.intro-story .names em { color: #e3b779; }
-.intro-story .date { font-size: clamp(.9rem,3vw,1rem); margin: 0 auto 28px; }
-.intro-story .countdown { margin: 0 auto 22px; max-width: 450px; gap: 10px; }
+
+.intro-story .names em {
+  color: #e3b779;
+}
+
+.intro-story .date {
+  font-size: clamp(.9rem, 3vw, 1rem);
+  margin: 0 auto 28px;
+}
+
+.intro-story .countdown {
+  margin: 0 auto 22px;
+  max-width: 450px;
+  gap: 10px;
+}
+
 .intro-story .countdown div {
   background: #fff2e4;
   border: 1px solid #edc99a;
   border-radius: 14px;
   padding: 15px 4px 13px;
 }
+
 .intro-story .countdown b {
   color: #762e3d;
-  font-size: clamp(1.85rem,7vw,2.4rem);
+  font-size: clamp(1.85rem, 7vw, 2.4rem);
 }
-.intro-story .countdown small { font-size: .67rem; letter-spacing: .11em; }
+
+.intro-story .countdown small {
+  font-size: .67rem;
+  letter-spacing: .11em;
+}
+
 .intro-story .scroll-hint {
   display: inline-block;
   color: #8e603f;
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(1.22rem,4.5vw,1.55rem);
+  font-size: clamp(1.22rem, 4.5vw, 1.55rem);
   font-style: italic;
   text-decoration: none;
   margin: 0 auto 10px;
 }
+
 .intro-story .scroll-hint:focus-visible {
   outline: 2px solid sienna;
   outline-offset: 5px;
 }
+
 .intro-story .intro-couple {
   margin: 10px -24px 0;
   padding: 0;
   line-height: 0;
 }
+
 .intro-story .intro-couple img {
   display: block;
   width: 100%;
   height: auto;
   object-fit: contain;
 }
+
 @media (max-width: 360px) {
-  .intro-story { padding-inline: 17px; }
-  .intro-story .intro-couple { margin-inline: -17px; }
-  .intro-story .names { font-size: clamp(2.25rem, 9vw, 2.55rem); }
+  .intro-story {
+    padding-inline: 17px;
+  }
+
+  .intro-story .intro-couple {
+    margin-inline: -17px;
+  }
+
+  .intro-story .names {
+    font-size: clamp(2.25rem, 9vw, 2.55rem);
+  }
 }
+
 @media (min-width: 650px) {
-  .cover { min-height: 100svh; }
-  .cover-link { min-height: 100svh; }
+  .cover {
+    min-height: 100svh;
+  }
+
+  .cover-link {
+    min-height: 100svh;
+  }
 }
