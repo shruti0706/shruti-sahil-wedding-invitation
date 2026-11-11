@@ -41,6 +41,14 @@ window.WEDDING_CONTENT = {
       "address": "Machalpur, Rajgarh, Madhya Pradesh"
     },
     {
+      "name": "Bhajan Sandhya",
+      "image": "assets/bhajan-sandhya.gif",
+      "date": "7 December 2026",
+      "time": "8:00 PM onwards",
+      "venue": "Agrawal Dharamshala",
+      "address": "Machalpur, Rajgarh, Madhya Pradesh"
+    },
+    {
       "name": "Haldi",
       "image": "assets/haldi.gif",
       "date": "8 December 2026",

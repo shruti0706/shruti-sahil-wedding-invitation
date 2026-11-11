@@ -341,14 +341,6 @@ h3 {
   }
 }
 
-/* Preserve approved vertical Mehndi illustration without cropping the lehenga or swing */
-.event-art[src$="mehndi.png"] {
-  aspect-ratio: auto;
-  height: auto;
-  object-fit: contain;
-  border-radius: 140px 140px 9px 9px;
-}
-
 /* Blessings artwork: show the complete supplied Ganesh Ji idol */
 .blessing img {
   width: 100%;
