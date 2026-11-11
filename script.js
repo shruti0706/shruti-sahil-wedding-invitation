@@ -1,0 +1,14 @@
+const data=window.WEDDING_CONTENT;const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const list=document.getElementById('event-list');data.events.forEach((e,i)=>{const card=document.createElement('article');card.className='event-card';card.innerHTML=`${Array.isArray(e.images)&&e.images.length?`<div class="combined-art">${e.images.map((src,j)=>`<img class="event-art" loading="lazy" src="${esc(src)}" alt="Approved ${j===0?'Mamera':'Gangour'} illustration">`).join('')}</div>`:e.image?`<img class="event-art" loading="lazy" src="${esc(e.image)}" alt="Approved ${esc(e.name)} illustration">`:`<div class="art-placeholder">Approved ${esc(e.name)} artwork<br><small>To be added</small></div>`}<h3>${esc(e.name)}</h3>${e.date?`<p>${esc(e.date)}</p>`:''}<div class="timing">${e.time?`<strong>${esc(e.time)}</strong>`:'<span class="blank">Timing to be added</span>'}</div><div class="venue">${e.venue?`<strong>${esc(e.venue)}</strong><br>`:'<span class="blank">Venue to be added</span>'}${e.address?`<div>${esc(e.address)}</div>`:''}</div>`;list.append(card)});const venueList = document.getElementById('venue-list');
+if (venueList && Array.isArray(data.venues)) {
+  data.venues.forEach((venue) => {
+    const entry = document.createElement('article');
+    entry.className = 'location-entry';
+    const hasMap = /^https:\/\//.test(venue.mapUrl || '');
+    entry.innerHTML = `<p class="location-kicker">Venue</p>
+      <h3 class="location-name">${esc(venue.name)}</h3>
+      <p class="location-address">${esc(venue.address)}</p>
+      ${hasMap ? `<a class="location-map-button" href="${esc(venue.mapUrl)}" target="_blank" rel="noopener noreferrer" aria-label="Open ${esc(venue.name)} in Google Maps">Open in Maps</a>` : ''}`;
+    venueList.append(entry);
+  });
+}
+const ganeshSlot=document.getElementById('ganesh');if(data.ganeshImage && ganeshSlot){ganeshSlot.innerHTML=`<img src="${esc(data.ganeshImage)}" alt="Lord Ganesha" style="width:100%;border-radius:12px">`};if(data.rsvpPhone){const p=data.rsvpPhone.replace(/[^\d]/g,'');document.getElementById('rsvp-action').innerHTML=`<a class="rsvp-btn" href="https://wa.me/${p}?text=${encodeURIComponent('Hello, I would like to RSVP for Shruti & Sahil’s wedding.')}">RSVP on WhatsApp</a>`}const target=new Date(data.weddingDate).getTime();function tick(){const diff=Math.max(0,target-Date.now());const d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60;for(const [id,v] of [['days',d],['hours',h],['minutes',m]])document.getElementById(id).textContent=String(v).padStart(2,'0')}tick();setInterval(tick,1000);const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.event-card').forEach(e=>io.observe(e));
