@@ -20,7 +20,7 @@ window.WEDDING_CONTENT = {
       "name": "Mata Pujan",
       "image": "assets/mata-pujan.gif",
       "date": "6 December 2026",
-      "time": "9:00 AM",
+      "time": "9:00 AM onwards",
       "venue": "Agrawal Dharamshala",
       "address": "Machalpur, Rajgarh, Madhya Pradesh"
     },
@@ -28,7 +28,7 @@ window.WEDDING_CONTENT = {
       "name": "Satyanarayan Katha & Bindora Procession",
       "image": "assets/bindora.gif",
       "date": "6 December 2026",
-      "time": "8:00 PM",
+      "time": "8:00 PM onwards",
       "venue": "Agrawal Dharamshala",
       "address": "Machalpur, Rajgarh, Madhya Pradesh"
     },
@@ -36,7 +36,7 @@ window.WEDDING_CONTENT = {
       "name": "Mehndi",
       "image": "assets/mehndi.png",
       "date": "7 December 2026",
-      "time": "1:00 PM",
+      "time": "1:00 PM onwards",
       "venue": "Agrawal Dharamshala",
       "address": "Machalpur, Rajgarh, Madhya Pradesh"
     },
@@ -44,7 +44,7 @@ window.WEDDING_CONTENT = {
       "name": "Haldi",
       "image": "assets/haldi.gif",
       "date": "8 December 2026",
-      "time": "1:00 PM",
+      "time": "1:00 PM onwards",
       "venue": "Riverside Inn Resorts",
       "address": "Vidisha, Madhya Pradesh"
     },
@@ -60,7 +60,7 @@ window.WEDDING_CONTENT = {
       "name": "Sagai & Ring Ceremony",
       "image": "assets/sagai.gif",
       "date": "9 December 2026",
-      "time": "10:00 AM",
+      "time": "10:00 AM onwards",
       "venue": "Riverside Inn Resorts",
       "address": "Vidisha, Madhya Pradesh"
     },
@@ -68,7 +68,7 @@ window.WEDDING_CONTENT = {
       "name": "Malaji",
       "image": "assets/malaji.gif",
       "date": "9 December 2026",
-      "time": "12:30 PM",
+      "time": "12:30 PM onwards",
       "venue": "Riverside Inn Resorts",
       "address": "Vidisha, Madhya Pradesh"
     },
@@ -80,7 +80,7 @@ window.WEDDING_CONTENT = {
         "assets/gangore.gif"
       ],
       "date": "9 December 2026",
-      "time": "1:00 PM",
+      "time": "1:00 PM onwards",
       "venue": "Riverside Inn Resorts",
       "address": "Vidisha, Madhya Pradesh"
     },
