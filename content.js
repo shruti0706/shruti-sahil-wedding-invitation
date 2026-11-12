@@ -21,48 +21,42 @@ window.WEDDING_CONTENT = {
       "image": "assets/mata-pujan.gif",
       "date": "6 December 2026",
       "time": "9:00 AM onwards",
-      "venue": "Agrawal Dharamshala",
-      "address": "Machalpur"
+      "venue": "Agrawal Dharamshala, Machalpur"
     },
     {
       "name": "Satyanarayan Katha & Bindora Procession",
       "image": "assets/bindora.gif",
       "date": "6 December 2026",
       "time": "8:00 PM onwards",
-      "venue": "Agrawal Dharamshala",
-      "address": "Machalpur"
+      "venue": "Agrawal Dharamshala, Machalpur"
     },
     {
       "name": "Mehendi",
       "image": "assets/mehndi.png",
       "date": "7 December 2026",
       "time": "1:00 PM onwards",
-      "venue": "Agrawal Dharamshala",
-      "address": "Machalpur"
+      "venue": "Agrawal Dharamshala, Machalpur"
     },
     {
       "name": "Bhajan Sandhya",
       "image": "assets/bhajan-sandhya.gif",
       "date": "7 December 2026",
       "time": "8:00 PM onwards",
-      "venue": "Agrawal Dharamshala",
-      "address": "Machalpur"
+      "venue": "Agrawal Dharamshala, Machalpur"
     },
     {
       "name": "Haldi",
       "image": "assets/haldi.gif",
       "date": "8 December 2026",
       "time": "1:00 PM onwards",
-      "venue": "Riverside Inn Resorts",
-      "address": "Vidisha"
+      "venue": "Riverside Inn Resorts, Vidisha"
     },
     {
       "name": "Sangeet",
       "image": "assets/sangeet.gif",
       "date": "8 December 2026",
       "time": "8:00 PM onwards",
-      "venue": "Riverside Inn Resorts",
-      "address": "Vidisha"
+      "venue": "Riverside Inn Resorts, Vidisha"
     },
     {
       "name": "Sagai, Ring Ceremony & Malaji",
@@ -77,8 +71,7 @@ window.WEDDING_CONTENT = {
       ],
       "date": "9 December 2026",
       "time": "10:00 AM onwards",
-      "venue": "Riverside Inn Resorts",
-      "address": "Vidisha"
+      "venue": "Riverside Inn Resorts, Vidisha"
     },
     {
       "name": "Mamera & Gangour",
@@ -93,16 +86,14 @@ window.WEDDING_CONTENT = {
       ],
       "date": "9 December 2026",
       "time": "1:00 PM onwards",
-      "venue": "Riverside Inn Resorts",
-      "address": "Vidisha"
+      "venue": "Riverside Inn Resorts, Vidisha"
     },
     {
       "name": "Reception (Aashirwad Samaroh) & Phere (Panigrahan Sanskar)",
       "image": "assets/reception.gif",
       "date": "9 December 2026",
       "time": "6:00 PM onwards",
-      "venue": "Riverside Inn Resorts",
-      "address": "Vidisha",
+      "venue": "Riverside Inn Resorts, Vidisha",
       "images": [
         "assets/reception.gif",
         "assets/phera.gif"
